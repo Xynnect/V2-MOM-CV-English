@@ -1,0 +1,38 @@
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+\usepackage{import}
+\usepackage{hyperref}
+
+\newcommand{\checkcase}{sample}
+\name{RUMYANA}{ATANASOVA}
+%\address{Mountain View, CA 94043}
+\mobile{0878984486} 
+\homepage{Ruse, Vladaja 8a}
+
+\email{rumyana.yordanova.atanasova@gmail.com}
+\linkedin{https://www.linkedin.com/in/rumyana-atanasova/}
+
+\newcommand{\showgrades}{yes}
+\ifdefstring{\checkcase}{finance}{\colorlet{awesome}{awesome-darknight}}{\colorlet{awesome}{awesome-red}}
+
+\begin{document}
+\makecvheader
+\let\cleardoublepage\clearpage
+\vspace{+3mm}
+\vspace{+3mm}
+\vspace{+3mm}
+\import{\sectiondir}{PersonalSummary.tex}
+\importsectioncommandtwo{WorkHistory.tex}{Experience}
+\importsectioncommandtwo{Education.tex}{Education}
+\import{\sectiondir}{EducationPageTwo.tex}
+\importsectioncommandtwo{Languages.tex}{Languages}
+\importsectioncommandtwo{ProfessionalTrainingAndQualifications.tex}{professional training and qualifications}
+\importsectioncommandthree{Interests.tex}{Interests}
+\importsectioncommandthree{References.tex}{References}
+
+\end{document}
